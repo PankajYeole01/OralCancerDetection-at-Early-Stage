@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oral Cancer Detection at Early Stage - Mini project</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   <div class="login">
+    <div class="container">
+   
+    
+      <div class="bubbles">
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:24;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:23;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+          <span style="--i:22;"></span>
+          <span style="--i:25;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:21;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:26;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:28;"></span>
+          <span style="--i:11;"></span>
+          <span style="--i:12;"></span>
+          <span style="--i:24;"></span>
+          <span style="--i:10;"></span>
+          <span style="--i:14;"></span>
+          <span style="--i:23;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:16;"></span>
+          <span style="--i:19;"></span>
+          <span style="--i:20;"></span>
+          <span style="--i:22;"></span>
+          <span style="--i:25;"></span>
+          <span style="--i:18;"></span>
+          <span style="--i:21;"></span>
+          <span style="--i:15;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:26;"></span>
+          <span style="--i:17;"></span>
+          <span style="--i:13;"></span>
+          <span style="--i:28;"></span>
+      </div>
+      <header>
+          <div class="container">
+              <div class="header-left">
+                  <img src="./logo.jpg" alt="coep logo">
+              </div>
+              <div class="header-right">
+                  <h1>Early Detection of Oral Cancer</h1><br>
+                  <h3>By</h3><br>
+                  <h2>Pankaj Yeole, Parshva Shah</h2><br>
+                  <h2>Shashwat Garg & Soham Methul</h2>
+                  <h3>Under Guidance of</h3><br>
+                  <h2>Mrs.Dr.R.D.Joshi Ma'am</h2>
+              </div>
+          </div>
+      </header>
+      
+     </div>
+     <form action="{{ url_for('predict') }}"method="post" enctype="multipart/form-data">
+      <div class="form-container">
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Enter temperature in drgrees" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="humidity">Humidity:</label>
+            <input type="number" id="humidity" name="humidity" placeholder="Enter percentage of relative humidity" required>
+          </div>
+        </div>
+        
+        <div class="btn-container">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        
+       
+     </form>
+    
+     <br><br><br>
+    
+      <h1 style="text-align: center; color: white;" >Result</h1>
+      <h4 style="text-align: center; color: white;">{{ prediction_text }}</h4>
+     
+
+
+  
+   </div>
+   
+   
+   
+</body>
+</html>
